@@ -6,8 +6,6 @@ const nextConfig: NextConfig = {
   images: {
     unoptimized: true
   },
-  assetPrefix: process.env.NODE_ENV === 'production' ? '/spacex-api' : '',
-  basePath: process.env.NODE_ENV === 'production' ? '/spacex-api' : ''
 };
 
 export default nextConfig;

@@ -1,12 +1,9 @@
 'use client'
-import { Typography, Box, CircularProgress, Alert, Pagination, TextField, FormControl, InputLabel, Select, MenuItem, Button, Chip, Switch, FormControlLabel } from '@mui/material';
+import { Typography, Box, CircularProgress, Alert, Pagination, TextField, FormControl, InputLabel, Select, MenuItem, Chip, Switch, FormControlLabel } from '@mui/material';
 import LaunchCard from './LaunchCard';
-import { LaunchData, fetchLaunches } from '../lib/api';
+import { fetchLaunches } from '../lib/api';
+import { LaunchData, LaunchGridProps } from '../types';
 import { useState, useEffect } from 'react';
-
-interface LaunchGridProps {
-  showFavorites?: boolean;
-}
 
 export default function LaunchGrid({ showFavorites = false }: LaunchGridProps) {
   const [launches, setLaunches] = useState<LaunchData[]>([]);

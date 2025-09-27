@@ -1,13 +1,6 @@
-import { Card, CardContent, Typography, Chip, Box, Button, IconButton, Tooltip } from "@mui/material";
-import { Rocket, CalendarToday, LocationOn, Visibility, Star, StarBorder } from "@mui/icons-material";
-import { LaunchData } from "../lib/api";
-
-interface LaunchCardProps {
-  launch: LaunchData;
-  onViewDetails?: (launch: LaunchData) => void;
-  onToggleFavorite?: (launch: LaunchData) => void;
-  isFavorite?: boolean;
-}
+import { Card, Typography, Chip, Box, Button, Tooltip } from "@mui/material";
+import { CalendarToday, Visibility, Star, StarBorder } from "@mui/icons-material";
+import { LaunchCardProps } from "../types";
 
 export default function LaunchCard({ launch, onViewDetails, onToggleFavorite, isFavorite = false }: LaunchCardProps) {
   const formatDate = (dateString: string) => {
